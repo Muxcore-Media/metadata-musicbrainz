@@ -1,0 +1,61 @@
+[
+  {
+    "id": "a74b1b7f-71a5-4011-9441-d0b5e4122711",
+    "name": "Radiohead",
+    "sort-name": "Radiohead",
+    "disambiguation": "English rock band",
+    "type": "Group",
+    "country": "GB",
+    "life-span": {"begin": "1985"},
+    "release-groups": [
+      {"id": "00000000-0000-4000-8000-000000000101", "title": "Pablo Honey", "primary-type": "Album", "first-release-date": "1993-02-22", "secondary-types": []},
+      {"id": "00000000-0000-4000-8000-000000000102", "title": "The Bends", "primary-type": "Album", "first-release-date": "1995-03-13", "secondary-types": []},
+      {"id": "00000000-0000-4000-8000-000000000103", "title": "OK Computer", "primary-type": "Album", "first-release-date": "1997-05-21", "secondary-types": []},
+      {"id": "00000000-0000-4000-8000-000000000104", "title": "Kid A", "primary-type": "Album", "first-release-date": "2000-10-02", "secondary-types": []},
+      {"id": "00000000-0000-4000-8000-000000000105", "title": "Airbag / How Am I Driving?", "primary-type": "EP", "first-release-date": "1998-04-06", "secondary-types": []},
+      {"id": "00000000-0000-4000-8000-000000000106", "title": "I Might Be Wrong: Live Recordings", "primary-type": "Album", "first-release-date": "2001-11-12", "secondary-types": ["Live"]}
+    ]
+  },
+  {
+    "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+    "name": "Daft Punk",
+    "sort-name": "Daft Punk",
+    "disambiguation": "French electronic music duo",
+    "type": "Group",
+    "country": "FR",
+    "life-span": {"begin": "1993"},
+    "release-groups": [
+      {"id": "00000000-0000-4000-8000-000000000201", "title": "Homework", "primary-type": "Album", "first-release-date": "1997-01-20", "secondary-types": []},
+      {"id": "00000000-0000-4000-8000-000000000202", "title": "Discovery", "primary-type": "Album", "first-release-date": "2001-03-12", "secondary-types": []},
+      {"id": "00000000-0000-4000-8000-000000000203", "title": "Random Access Memories", "primary-type": "Album", "first-release-date": "2013-05-17", "secondary-types": []},
+      {"id": "00000000-0000-4000-8000-000000000204", "title": "Get Lucky", "primary-type": "Single", "first-release-date": "2013-04-19", "secondary-types": []}
+    ]
+  },
+  {
+    "id": "83d91898-7763-47d7-b03b-b92132375c47",
+    "name": "Pink Floyd",
+    "sort-name": "Pink Floyd",
+    "disambiguation": "English progressive rock band",
+    "type": "Group",
+    "country": "GB",
+    "life-span": {"begin": "1965"},
+    "release-groups": [
+      {"id": "00000000-0000-4000-8000-000000000301", "title": "The Piper at the Gates of Dawn", "primary-type": "Album", "first-release-date": "1967-08-05", "secondary-types": []},
+      {"id": "00000000-0000-4000-8000-000000000302", "title": "The Dark Side of the Moon", "primary-type": "Album", "first-release-date": "1973-03-01", "secondary-types": []},
+      {"id": "00000000-0000-4000-8000-000000000303", "title": "Wish You Were Here", "primary-type": "Album", "first-release-date": "1975-09-12", "secondary-types": []}
+    ]
+  },
+  {
+    "id": "87c5dedd-371d-4a53-9f7f-80522fb7f3cb",
+    "name": "Björk",
+    "sort-name": "Björk",
+    "disambiguation": "Icelandic singer and songwriter",
+    "type": "Person",
+    "country": "IS",
+    "life-span": {"begin": "1965-11-21"},
+    "release-groups": [
+      {"id": "00000000-0000-4000-8000-000000000401", "title": "Debut", "primary-type": "Album", "first-release-date": "1993-07-05", "secondary-types": []},
+      {"id": "00000000-0000-4000-8000-000000000402", "title": "Homogenic", "primary-type": "Album", "first-release-date": "1997-09-22", "secondary-types": []}
+    ]
+  }
+]

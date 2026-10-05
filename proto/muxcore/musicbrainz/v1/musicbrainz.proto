@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+package muxcore.musicbrainz.v1;
+
+option go_package = "github.com/Muxcore-Media/metadata-musicbrainz/proto/musicbrainzv1;musicbrainzv1";
+
+// MusicBrainzService exposes MusicBrainz artist and release-group metadata to
+// other MuxCore modules (media-music resolves MBIDs and syncs albums from it).
+service MusicBrainzService {
+  // SearchArtist finds artists by free-text query, best match first.
+  rpc SearchArtist(SearchArtistRequest) returns (SearchArtistResponse);
+  // GetArtist looks up one artist by MBID, including its release groups.
+  rpc GetArtist(GetArtistRequest) returns (GetArtistResponse);
+}
+
+message SearchArtistRequest {
+  // Free-text artist name or Lucene query.
+  string query = 1;
+  // Maximum results; the server clamps to 1..100 (default 25 when zero).
+  int32 limit = 2;
+  // Zero-based result offset for paging.
+  int32 offset = 3;
+}
+
+message ArtistSearchResult {
+  // MusicBrainz artist MBID.
+  string id = 1;
+  string name = 2;
+  // MusicBrainz relevance score, 0..100.
+  int32 score = 3;
+  string sort_name = 4;
+  string disambiguation = 5;
+  // "Person", "Group", ...
+  string type = 6;
+  // ISO 3166-1 alpha-2 country code, when known.
+  string country = 7;
+}
+
+message SearchArtistResponse {
+  repeated ArtistSearchResult artists = 1;
+  // Total matches reported by MusicBrainz (may exceed len(artists)).
+  int32 total = 2;
+}
+
+message GetArtistRequest {
+  // MusicBrainz artist MBID (UUID).
+  string musicbrainz_id = 1;
+}
+
+message ReleaseGroup {
+  // MusicBrainz release-group MBID.
+  string id = 1;
+  string title = 2;
+  // "Album", "EP", "Single", "Broadcast", "Other"; empty when unknown.
+  string primary_type = 3;
+  // Four-digit year of first_release_date; 0 when unknown.
+  int32 first_release_date_year = 4;
+  // "Live", "Compilation", ...
+  repeated string secondary_types = 5;
+  // MusicBrainz partial date: "YYYY", "YYYY-MM" or "YYYY-MM-DD"; may be empty.
+  string first_release_date = 6;
+}
+
+message GetArtistResponse {
+  string id = 1;
+  string name = 2;
+  string disambiguation = 3;
+  repeated ReleaseGroup release_groups = 4;
+  string sort_name = 5;
+  string type = 6;
+  string country = 7;
+  // Year the artist began (life-span begin); 0 when unknown.
+  int32 begin_year = 8;
+}
