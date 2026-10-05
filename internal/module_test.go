@@ -47,7 +47,7 @@ func TestInfo(t *testing.T) {
 	if info.ID != "metadata-musicbrainz" || info.Version != Version || info.HTTPAddr != DefaultGRPCAddr {
 		t.Fatalf("%+v", info)
 	}
-	if !strings.Contains(strings.Join(info.Capabilities, ","), "metadata.music") {
+	if strings.Join(info.Capabilities, ",") != "metadata.music,metadata.musicbrainz" {
 		t.Fatalf("capabilities %v", info.Capabilities)
 	}
 	if err := m.Health(context.Background()); err != nil {

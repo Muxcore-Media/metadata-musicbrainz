@@ -1,0 +1,14 @@
+{
+  "name": "Metadata MusicBrainz",
+  "description": "MusicBrainz artist and release-group metadata provider for music libraries",
+  "version": "0.1.0",
+  "author": "MuxCore",
+  "roles": [
+    "metadata"
+  ],
+  "capabilities": [
+    "metadata.music",
+    "metadata.musicbrainz"
+  ],
+  "minCoreVersion": "0.6.0"
+}
