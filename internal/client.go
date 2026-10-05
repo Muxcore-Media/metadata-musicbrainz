@@ -17,12 +17,12 @@ const (
 	DefaultBaseURL = "https://musicbrainz.org/ws/2"
 	// DefaultTimeout bounds each upstream request.
 	DefaultTimeout = 15 * time.Second
-	// DefaultUserAgent identifies this module; MusicBrainz asks for a contact URL
-	// or address, so operators should override it via MUSICBRAINZ_USER_AGENT.
-	DefaultUserAgent = "MuxCore-metadata-musicbrainz/" + Version + " ( https://github.com/Muxcore-Media/metadata-musicbrainz )"
-
-	maxBodyBytes = 8 << 20
+	maxBodyBytes   = 8 << 20
 )
+
+// DefaultUserAgent identifies this module; MusicBrainz asks for a contact URL
+// or address, so operators should override it via MUSICBRAINZ_USER_AGENT.
+var DefaultUserAgent = "MuxCore-metadata-musicbrainz/" + Version + " ( https://github.com/Muxcore-Media/metadata-musicbrainz )"
 
 // ClientConfig configures a live MusicBrainz client.
 type ClientConfig struct {

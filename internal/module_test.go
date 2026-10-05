@@ -12,6 +12,8 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/status"
 
+	modulesdk "github.com/Muxcore-Media/core/sdk/go/module"
+	manifest "github.com/Muxcore-Media/metadata-musicbrainz"
 	musicbrainzv1 "github.com/Muxcore-Media/metadata-musicbrainz/proto/musicbrainzv1"
 )
 
@@ -202,5 +204,11 @@ func TestYearOf(t *testing.T) {
 		if got := yearOf(in); got != want {
 			t.Errorf("yearOf(%q) = %d, want %d", in, got, want)
 		}
+	}
+}
+
+func TestVersionComesFromManifest(t *testing.T) {
+	if want := modulesdk.ManifestVersion(manifest.ManifestJSON); Version != want || Version == "" {
+		t.Fatalf("Version = %q, want manifest version %q", Version, want)
 	}
 }
